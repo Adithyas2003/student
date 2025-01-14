@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Contact</title>
+</head>
+<body>
+    <h1>Add New Contact</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Name"><br>
+        <input type="email" name="email" placeholder="Email"><br>
+        <input type="text" name="phone" placeholder="Phone"><br>
+        <input type="text" name="alternative_phone" placeholder="Alternative Phone"><br>
+        <input type="file" name="image"><br>
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calling {{ contact.name }}</title>
+</head>
+<body>
+    <h1>Calling {{ contact.name }}</h1>
+    <img src="{{ contact.image.url }}" alt="{{ contact.name }}" style="width:150px;height:150px;">
+    <p>Phone: {{ contact.phone }}</p>
+    <a href="{% url 'contact_detail' contact.id %}" style="color:red;">End Call</a>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact List</title>
+</head>
+<body>
+    <h1>Contact List</h1>
+    <a href="{% url 'add_contact' %}">Add Contact</a>
+    <ul>
+        {% for contact in contacts %}
+        <li>
+            <img src="{{ contact.image.url }}" alt="{{ contact.name }}" style="width:50px;height:50px;">
+            <a href="{% url 'contact_detail' contact.id %}">{{ contact.name }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
